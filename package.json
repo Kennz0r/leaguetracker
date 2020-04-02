@@ -2,16 +2,19 @@
   "name": "leaguetracker",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://euw1.api.riotgames.com/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "cors-anywhere": "^0.4.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "requests": "^0.3.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "set PORT=7777 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
