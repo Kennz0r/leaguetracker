@@ -1,5 +1,6 @@
 import "./App.css";
 import React, { Component } from "react";
+import NavBar from "./navbar";
 
 class App extends Component {
   constructor(props) {
@@ -61,13 +62,18 @@ class App extends Component {
       return <div>Loading...</div>;
     } else {
       return (
-        <ul>
-          {items.map(item => (
-            <li key={item.leagueId}>
-              {item.queueType} {item.summonerName}
-            </li>
-          ))}
-        </ul>
+        <React.Fragment>
+          <NavBar />
+          <main className="container">
+            <ul>
+              {items.map(item => (
+                <li key={item.leagueId}>
+                  {item.queueType} {item.summonerName}
+                </li>
+              ))}
+            </ul>
+          </main>
+        </React.Fragment>
       );
     }
   }
